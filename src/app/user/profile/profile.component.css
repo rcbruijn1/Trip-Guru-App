@@ -1,0 +1,8 @@
+.container {
+    padding: 120px;
+}
+
+li {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}

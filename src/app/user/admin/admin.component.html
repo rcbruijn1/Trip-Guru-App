@@ -1,0 +1,77 @@
+<div class="form-container">
+  <div class="container">
+    <h2 class="page-header">City</h2>
+    <form (submit)="onCitySubmit()">
+      <div class="form-group">
+        <label>Name</label>
+        <input type="text" [(ngModel)]="city_name" name="city_name" class="form-control">
+      </div>
+      <div class="form-group">
+        <label>Country</label>
+        <input type="text" [(ngModel)]="city_country" name="city_country" class="form-control">
+      </div>
+      <div class="form-group">
+        <label>Description</label>
+        <input type="text" [(ngModel)]="city_description" name="city_description" class="form-control">
+      </div>
+      <div class="form-group">
+        <label>Image Path</label>
+        <input [(ngModel)]="city_imagePath" name="city_imagePath" class="form-control">
+      </div>
+      <input type="submit" class="btn btn-primary" value="Add City">
+    </form>
+
+    <form (submit)="onLocationAdded()">
+      <div class="form-group">
+        <h4>Add Location</h4>
+        <label>Select location: </label>
+        <select class="form-control" (change)="onSelectLocation($event)">
+          <option *ngFor="let l of locations" value="{{l._id}}">{{l._id}} - {{l.name}}</option>
+        </select>
+        <label>Add to: </label>
+        <select class="form-control" (change)="onSelectCity($event)">
+            <option *ngFor="let c of cities" value="{{c._id}}">{{c._id}} - {{c.name}}</option>
+        </select>
+      </div>
+      <input type="submit" class="btn btn-primary" value="Add Location">
+    </form>
+
+    <form (submit)="removeCityById()">
+      <div class="form-group">
+        <h4>City Removal</h4>
+        <select class="form-control" (change)="onSelectCity($event)">
+          <option *ngFor="let c of cities" value="{{c._id}}">{{c._id}} - {{c.name}}</option>
+        </select>
+      </div>
+      <input type="submit" class="btn btn-primary" value="Remove">
+    </form>
+
+  </div>
+  <div class="container">
+    <h2 class="page-header">Location</h2>
+    <form (submit)="onLocationSubmit()">
+      <div class="form-group">
+        <label>Name</label>
+        <input type="text" [(ngModel)]="location_name" name="location_name" class="form-control">
+      </div>
+      <div class="form-group">
+        <label>Description</label>
+        <input type="text" [(ngModel)]="location_description" name="location_description" class="form-control">
+      </div>
+      <div class="form-group">
+        <label>Image Path</label>
+        <input type="text" [(ngModel)]="location_imagePath" name="location_imagePath" class="form-control">
+      </div>
+      <input type="submit" class="btn btn-primary" value="Add">
+      </form>
+      <form (submit)="removeLocationById()">
+          <div class="form-group">
+            <h4>Location Removal</h4>
+            <select class="form-control" (change)="onSelectLocation($event)">
+              <option *ngFor="let l of locations" value="{{l._id}}">{{l._id}} - {{l.name}}</option>
+            </select>
+          </div>
+          <input type="submit" class="btn btn-primary" value="Remove">
+        </form>
+  </div>
+</div>

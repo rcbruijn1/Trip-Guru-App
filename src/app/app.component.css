@@ -1,0 +1,19 @@
+.navbar-brand {
+    font-size: 30px;
+}
+
+
+.nav-item {
+    font-size: 15px;
+    transform: scale(1);
+    transition: 0.1s ease-in-out;
+}
+
+.nav-item:hover{
+  transform: scale(1.05);
+}
+
+.navbar{
+    z-index: 5;
+}
+

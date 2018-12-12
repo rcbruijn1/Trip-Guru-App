@@ -1,0 +1,22 @@
+<div class="city-container">
+  <div class="city-view-container">
+    <div class="card-container">
+      <div *ngIf="city" class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{{city.imagePath}}" alt="Card image cap">
+        <div class="card-body">
+          <h4 class="card-title">{{city.name}}</h4>
+          <h6 class="card-title">{{city.country}}</h6>
+        </div>
+        <div class="card-body">
+            <p class="card-text">"{{city.description}}"</p>
+        </div>
+        <div class="card-body">
+          <a class="btn btn-primary" routerLink="/">Return to Discovery</a>
+        </div>
+      </div>
+    </div>
+    <div class="locations-container">
+      <app-city-locations *ngIf="city" [city]="city" ></app-city-locations>
+    </div>
+  </div>
+</div>

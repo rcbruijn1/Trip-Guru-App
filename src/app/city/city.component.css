@@ -1,0 +1,41 @@
+.city-container {
+    position: relative;
+    padding: 100px;
+    
+}
+
+.city-view-container{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.locations-container {
+    padding: 40px;
+}
+
+.card-container {
+    padding: 40px;  
+}
+
+.card {
+    padding: 10px;
+    background-color:rgba(255, 255, 255, 0.9);
+    color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
+
+}
+
+.list-group {
+    padding-bottom: 100px;
+}
+
+a {
+    transform: scale(1);
+    transition: 0.2s;
+}
+
+a:hover {
+    transform: scale(1.05);
+ }

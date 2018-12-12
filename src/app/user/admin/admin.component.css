@@ -1,0 +1,32 @@
+.form-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 150px;
+}
+
+form {
+    color: white;
+}
+
+select{
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 15px;
+}
+
+.page-header {
+    color: white;
+}
+h4 {
+    color: white;
+    padding-top: 30px;
+    margin-bottom: 20px;
+}
+.container {
+    padding: 20px;
+    width: 40%;
+    background-color: rgba(0, 0, 0, 0.5);
+}

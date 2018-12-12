@@ -1,0 +1,19 @@
+<div class="discovery-container">
+  <div class="discovery-header">
+    <h1>Discovery</h1>
+  </div>
+  <div class="discovery-card-container">
+    <div class="card-container">
+      <div *ngFor="let c of cities" class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{{c.imagePath}}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{c.name}}</h5>
+          <p class="card-text">{{c.description}}</p>
+          <div class="card-body body-btn">
+              <a href="#" class="btn btn-primary" [routerLink]= "['/city', c._id]">Explore {{c.name}}</a>
+          </div>          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

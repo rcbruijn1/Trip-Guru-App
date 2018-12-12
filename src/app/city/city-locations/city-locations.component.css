@@ -1,0 +1,35 @@
+.card {
+    display: flex;
+    flex-direction: row;
+    height: 200px;
+    margin-bottom: 25px;
+    background-color:rgba(255, 255, 255, 0.9);
+    color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
+    padding: 0px;
+    
+    
+}
+
+.card-img {
+    width: 35%;
+}
+
+.card-text {
+    padding: 10px;
+}
+
+a {
+    float: right;
+    transform: scale(1);
+    transition: 0.2s;
+}
+
+a:hover{
+    transform: scale(1.05);
+}
+
+.btn {
+    border-radius: 30px;
+}
+

@@ -1,0 +1,68 @@
+.discovery-container{
+  background-color: rgba(0, 0, 0, 0.5);
+  
+}
+
+.discovery-header{
+  padding: 100px;
+}
+
+h1 {
+  display: block;
+  text-align: center;
+  font-size: 50px;
+  color: white;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.4);
+  
+}
+
+.discovery-card-container{
+  display: flex;
+  justify-content: center; 
+}
+
+.card-container {
+  width: 1000px;
+  display: grid;
+  padding-bottom: 100px;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+  grid-gap: 30px;
+}
+
+.card {
+  /* margin: 15px; */
+  padding: 10px;
+  background-color:rgba(255, 255, 255, 0.9);
+  color: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
+  transform: scale(1);
+  transition: 0.1s ease-in-out;
+  
+}
+
+.card-img-top {
+  height: 177px;
+}
+
+.card-title{
+  font-size: 19px;
+}
+
+.card-text {
+  font-size: 16px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6);
+}
+
+
+/* .body-btn {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+} */
+
+

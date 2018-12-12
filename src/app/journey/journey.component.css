@@ -1,0 +1,13 @@
+form {
+    color: black;
+    font-size: 14px;
+}
+
+.page-header {
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+.container {
+    padding-top: 100px;
+}
