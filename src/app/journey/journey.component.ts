@@ -9,12 +9,12 @@ import { FlashMessagesService} from 'angular2-flash-messages';
 })
 export class JourneyComponent implements OnInit {
   journeys: any;
-
   cityId: string;
+  cities: any;
 
   journey_name: string;
-  journey_departure_date: string;
-  journey_return_date: string;
+  journey_departure_date: Date;
+  journey_return_date: Date;
   journey_description: string;
 
 
@@ -25,9 +25,13 @@ export class JourneyComponent implements OnInit {
     this.journeyService.getJourneys()
     .subscribe(res => {
       this.journeys = res;
-      console.log(res)
+      console.log(this.journeys);
+      // Logt wel een object met daarin de cities, cities zijn niet zelf te loggen
+
     })
+
   }
+
 
   onJourneySubmit() {
     const new_journey = {
@@ -47,10 +51,6 @@ export class JourneyComponent implements OnInit {
     });
   }
 
-  onSelectCity(event) {
-    this.cityId = event.target.value;
-    console.log(this.cityId);
-  }
 
   
 

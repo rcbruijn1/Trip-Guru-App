@@ -23,4 +23,12 @@ export class JourneyService {
     .map(res => res.json());
   }
 
+  addCityById(_id:string, city){
+
+    let headers = new Headers();
+    headers.append('Content-Type','application/json');
+    return this._http.post(this.baseUrl + '/' + _id, city, {headers: headers})
+    .map(res => res.json());
+  }
+
 }

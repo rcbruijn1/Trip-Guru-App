@@ -39,3 +39,7 @@ a {
 a:hover {
     transform: scale(1.05);
  }
+
+ .btn {
+     width: 100%;
+ }

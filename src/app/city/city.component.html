@@ -10,6 +10,12 @@
         <div class="card-body">
             <p class="card-text">"{{city.description}}"</p>
         </div>
+        <select class="form-control" (change)="onSelectJourney($event)">
+          <option *ngFor="let j of journeys" value="{{j._id}}">{{j.name}}</option>
+      </select>
+        <div class="card-body">
+          <a (click)="onCityAdded()"class="btn btn-primary btn-success">Add to Journey</a>
+        </div>
         <div class="card-body">
           <a class="btn btn-primary" routerLink="/">Return to Discovery</a>
         </div>

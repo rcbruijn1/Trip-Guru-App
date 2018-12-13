@@ -1,35 +1,36 @@
 <div class="container">
-    <h2 class="page-header">My Journey</h2>
-    <form (submit)="onJourneySubmit()">
-      <div class="form-group">
-        <label>Name</label>
-        <input type="text" [(ngModel)]="journey_name" name="journey_name" class="form-control">
-      </div>
-      <div class="form-group">
-        <label>Departure Date</label>
-        <input type="text" [(ngModel)]="journey_departure_date" name="journey_departure_date" class="form-control">
-      </div>
-      <div class="form-group">
-        <label>Return Date</label>
-        <input type="text" [(ngModel)]="journey_return_date" name="journey_return_date" class="form-control">
-      </div>
-      <div class="form-group">
-        <label>Description</label>
-        <input [(ngModel)]="journey_description" name="journey_description" class="form-control">
-      </div>
-      <input type="submit" class="btn btn-primary" value="Add Journey">
-    </form>
+  <h2 class="page-header">My Journey</h2>
+  <form (submit)="onJourneySubmit()">
+    <div class="form-group">
+      <label>Name</label>
+      <input type="text" [(ngModel)]="journey_name" name="journey_name" class="form-control">
     </div>
-    <div class="container">
-        <div *ngFor="let j of journeys" class="card" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">{{j.name}}</h5>
-              <p class="card-text">{{j.description}}</p>
-              <p class="card-text">{{j.journey_departure_date}}</p>
-              <p class="card-text">{{j.journey_return_date}}</p>
-              <div class="card-body body-btn">
-                  <a href="#" class="btn btn-primary">Add City</a>
-              </div>          
-            </div>
-          </div>
+    <div class="form-group">
+      <label>Departure Date</label>
+      <input type="date" max="3000-12-31" min="1000-01-01" [(ngModel)]="journey_departure_date" name="journey_departure_date" class="form-control">
     </div>
+    <div class="form-group">
+      <label>Return Date</label>
+      <input type="date" max="3000-12-31" min="1000-01-01" [(ngModel)]="journey_return_date" name="journey_return_date" class="form-control">
+    </div>
+    <div class="form-group">
+      <label>Description</label>
+      <input [(ngModel)]="journey_description" name="journey_description" class="form-control">
+    </div>
+    <input type="submit" class="btn btn-primary" value="Add Journey">
+  </form>
+</div>
+<div class="container">
+  <div *ngFor="let j of journeys" class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h3 class="card-title">{{j.name}}</h3>
+      <h5 class="card-title">{{j.cities}}</h5>
+      <p class="card-text">{{j.description}}</p>
+      <p class="card-text">{{j.departure_date}}</p>
+      <p class="card-text">{{j.return_date}}</p>
+      <div class="card-body body-btn">
+        <a href="#" class="btn btn-primary">Add City</a>
+      </div>
+    </div>
+  </div>
+</div>
